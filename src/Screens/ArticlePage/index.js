@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { View, Text, Button, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Text, Button, StyleSheet, TouchableOpacity , ScrollView} from "react-native";
 
 import Icon from "react-native-vector-icons/Feather";
 export default class ArticlePage extends Component {
@@ -27,11 +27,7 @@ export default class ArticlePage extends Component {
 
     return (
       <View style={container}>
-        <View
-          style={[
-            header
-          ]}
-        >
+        <View style={[header]}>
           <View style={menu}>
             <TouchableOpacity onPress={this._onBackPressed.bind(this)}>
               <View>
@@ -42,11 +38,12 @@ export default class ArticlePage extends Component {
           <View style={titleContainer}>
             <View style={textContainer}>
               <Text style={title}>{article.title}</Text>
-              {/* <Text style={secondaryTitle}>{article.time}</Text> */}
             </View>
           </View>
         </View>
-        <View style={content}>{}</View>
+        <ScrollView style={content}>
+          <Text style={secondaryTitle}>{article.content}</Text>
+        </ScrollView>
       </View>
     );
   }
@@ -64,7 +61,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     padding: 5,
     elevation: 3,
-    maxHeight: 125,
+    maxHeight: 100,
     backgroundColor: "#f5f5f5"
   },
   menu: { flex: 1 },
@@ -86,7 +83,7 @@ const styles = StyleSheet.create({
   },
   secondaryTitle: {
     fontSize: 24,
-    color: "#ffffff"
+    color: "#000000"
   },
   content: {
     flex: 6

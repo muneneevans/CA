@@ -52,7 +52,7 @@ class ArticleList extends Component {
             renderRow={rowData => (
               <TouchableHighlight
                 onPress={() => {
-                  this._onArticleItemPress(rowData.item);
+                  this._onArticleItemPress(rowData);
                 }}
               >
                 <ArticleItem article={rowData} />

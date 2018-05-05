@@ -6,14 +6,19 @@ import { StackNavigator } from "react-navigation";
 import Home from "../Home";
 
 import TopicPage from "../TopicPage";
+import ArticlePage from "../ArticlePage";
 
 const Routes = StackNavigator(
   {
     Home: {
       screen: Home
-    },   
+    },
     TopicPage: {
       screen: TopicPage,
+      header: null
+    },
+    ArticlePage: {
+      screen: ArticlePage,
       header: null
     }
   },

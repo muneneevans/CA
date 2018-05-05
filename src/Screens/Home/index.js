@@ -37,7 +37,8 @@ export default class Home extends Component {
     const items = [
       {
         title: "Principles",
-        description: "To ensure participants understand Conservation Agriculture in the LUSIP-GEF Project and appreciated opportunities and contrainsts that may come with the technology",
+        description:
+          "To ensure participants understand Conservation Agriculture in the LUSIP-GEF Project and appreciated opportunities and contrainsts that may come with the technology",
         code: "#1abc9c",
         image:
           "https://images.pexels.com/photos/993626/pexels-photo-993626.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
@@ -143,7 +144,7 @@ export default class Home extends Component {
                 onPress={() => {
                   this.props.navigation.navigate("TopicPage", { topic: item });
                 }}
-                style={{ flex: 1 }}
+                style={card}
               >
                 <ImageBackground
                   style={[card, { backgroundColor: item.code }]}
@@ -250,7 +251,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 5,
     overflow: "hidden",
     minHeight: 150,
-    elevation: 3
+    elevation: 4
   },
   cardText: {
     fontFamily: "JosefinSans_Regular",

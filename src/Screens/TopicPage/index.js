@@ -19,8 +19,8 @@ export default class TopicPage extends Component {
     this.props.navigation.goBack();
   };
 
-  _onOrderitemClick = order => {
-    this.props.navigation.navigate("Home", { order: order });
+  _onOrderitemClick = article => {
+    this.props.navigation.navigate("ArticlePage", { article: article });
   };
 
   render() {
@@ -99,7 +99,8 @@ const styles = StyleSheet.create({
     flex: 2,
     flexDirection: "column",
     backgroundColor: "#ffffff",
-    justifyContent: "space-between"
+    justifyContent: "space-between",
+    elevation: 3
   },
   titleContainer: {
     flex: 1,
